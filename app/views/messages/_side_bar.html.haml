@@ -12,10 +12,10 @@
     .group
       .group1
         - current_user.groups.each do |group|
-          = link_to "#", class: "group__group-name" do
+          = link_to group_messages_path(group), class: "group__group-name" do
             = group.name
           .group2
-            = link_to "#", class: "group__latest-message" do
-              まだメッセージはありません
+            = link_to group_messages_path(group), class: "group__latest-message" do
+              = group.show_last_message
 
 
