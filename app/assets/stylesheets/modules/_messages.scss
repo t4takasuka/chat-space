@@ -44,20 +44,19 @@
       padding: 20px 20px 0;
       .group {
         margin-bottom: 40px;
-        .group1 {
-          .group__group-name {
-            font-size: 15px;
-            text-decoration: none;
-            margin-bottom: 5px;
-            color: #ffffff;
+        a {
+          text-decoration: none;
           }
+        &__group-name {
+          font-size: 15px;
+          text-decoration: none;
+          margin-bottom: 5px;
+          color: #ffffff;
         }
-        .group2 {
-          .group__latest-message {
-            font-size: 11px;
-            text-decoration: none;
-            color: #ffffff;
-          }
+        &__latest-message {
+          font-size: 11px;
+          text-decoration: none;
+          color: #ffffff;
         }
       }
     }

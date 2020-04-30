@@ -9,13 +9,10 @@
         = link_to edit_user_path(current_user), class: "side-header__box__menu__new-group" do
           = icon('fas', 'cog')
   .groups
-    .group
-      .group1
-        - current_user.groups.each do |group|
-          = link_to group_messages_path(group), class: "group__group-name" do
+    - current_user.groups.each do |group|
+      .group
+        = link_to group_messages_path(group) do
+          %p.group__group-name
             = group.name
-          .group2
-            = link_to group_messages_path(group), class: "group__latest-message" do
-              = group.show_last_message
-
-
+          %p.group__latest-message
+            = group.show_last_message
